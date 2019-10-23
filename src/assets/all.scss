@@ -1,6 +1,0 @@
-@import '~bootstrap/scss/functions'; // 載入bootstrap function.scss 來啟用功能
-@import './helps/variables'; // 載入編輯的variables.scss
-@import '~bootstrap/scss/bootstrap'; // ~bootstrap 代表 node_module/bootstrap.scss
-
-@import './components/index.scss';
-@import './components/loading.scss';
