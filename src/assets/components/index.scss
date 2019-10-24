@@ -5,6 +5,12 @@ html,body{
   font-family:-apple-system,BlinkMacSystemFont,'Noto Sans TC',"Segoe UI","Roboto","Helvetica Neue", Arial, sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
+@media only screen and (max-width:374px) {
+  .bigTitle {
+    font-size: 2rem;
+  }
+}
+
 .citySelect-wrap {
   position: relative;
 }
@@ -74,6 +80,43 @@ html,body{
 .aqi-status-item:first-child .aqi-status-caption {
   border-left: 3px solid;
 }
+
+@media only screen and (min-width:768px) and (max-width:1200px) {
+  .aqi-status-value {
+    height: 75%;
+  }
+  .aqi-status-caption {
+    height: 75%;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .aqi-status-value {
+    padding:10px 0;
+    height: 60px;
+  }
+  .aqi-status-caption {
+    padding:10px 0;
+    height: 60px;
+  }
+  .aqi-status-item:nth-last-child(2) .aqi-status-value,
+  .aqi-status-item:nth-last-child(2) .aqi-status-caption,
+  .aqi-status-item:nth-last-child(4) .aqi-status-value,
+  .aqi-status-item:nth-last-child(4) .aqi-status-caption
+  {
+    border-left: 3px solid;
+  }
+  .aqi-status-item:nth-last-child(1) .aqi-status-value,
+  .aqi-status-item:nth-last-child(2) .aqi-status-value,
+  .aqi-status-item:nth-last-child(3) .aqi-status-value,
+  .aqi-status-item:nth-last-child(4) .aqi-status-value
+  {
+    border-top: none;
+  }
+
+}
+
+
 
 .status-color-level1 {
   background-color: #95F084;
@@ -150,7 +193,6 @@ html,body{
 .districtData {
   border: 3px solid;
   border-top: 0;
-
 }
 
 .districtData > ul {
@@ -179,4 +221,26 @@ html,body{
 .district-items:hover {
   cursor: pointer;
   box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+@media only screen and (max-width:374px) {
+  .data-items {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width:359px) {
+
+  .data-items span{
+    font-size: 0.8rem;
+  }
+
+  .district-items {
+    height: 130px;
+  }
+  .districtAqi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

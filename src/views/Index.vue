@@ -3,8 +3,8 @@
   <Loading v-if="isLoading"/>
   <div class="container py-5">
     <section class="row">
-      <div class="col-4">
-        <h1 class="font-weight-bold">空氣品質指標 (AQI)</h1>
+      <div class="col-xl-4">
+        <h1 class="font-weight-bold bigTitle">空氣品質指標 (AQI)</h1>
         <div class="citySelect-wrap">
           <select
             name="city"
@@ -18,36 +18,36 @@
           </select>
         </div>
       </div>
-      <div class="col-8">
+      <div class="col-xl-8 mt-xl-0 mt-3">
         <div class="row aqi-status-wrap no-gutters">
-          <div class="col aqi-status-item">
+          <div class="col-md-2 col-6 aqi-status-item">
             <div class="aqi-status-value status-color-level1"><span>0~50</span></div>
             <div class="aqi-status-caption">良好</div>
           </div>
-          <div class="col aqi-status-item">
+          <div class="col-md-2 col-6 aqi-status-item">
             <div class="aqi-status-value status-color-level2"><span>51~100</span></div>
             <div class="aqi-status-caption">普通</div>
           </div>
-          <div class="col aqi-status-item">
+          <div class="col-md-2 col-6 aqi-status-item">
             <div class="aqi-status-value status-color-level3"><span>101~150</span></div>
             <div class="aqi-status-caption">對敏感族群 不健康</div>
           </div>
-          <div class="col aqi-status-item">
+          <div class="col-md-2 col-6 aqi-status-item">
             <div class="aqi-status-value status-color-level4"><span>151~200</span></div>
             <div class="aqi-status-caption">對所有族群 不健康</div>
           </div>
-          <div class="col aqi-status-item">
+          <div class="col-md-2 col-6 aqi-status-item">
             <div class="aqi-status-value status-color-level5"><span>201~300</span></div>
             <div class="aqi-status-caption">非常不健康</div>
           </div>
-          <div class="col aqi-status-item">
+          <div class="col-md-2 col-6 aqi-status-item">
             <div class="aqi-status-value status-color-level6"><span>301~400</span></div>
             <div class="aqi-status-caption">危害</div>
           </div>
         </div>
       </div>
     </section>
-    <div class="separate-wrap my-5">
+    <div class="separate-wrap my-xl-5 mb-md-2 my-5 d-md-flex d-none">
       <h2 class="font-weight-bold">{{ countySelected }}</h2>
       <div class="separate-line-wrap">
         <div class="separate-line"></div>
@@ -56,8 +56,15 @@
         <span>{{ fillterUpdateTime }}</span><span class="ml-3">update</span>
       </div>
     </div>
+    <!-- mobole separate -->
+    <div class="separate-wrap my-xl-5 my-2 d-md-none d-block">
+      <h2 class="font-weight-bold">{{ countySelected }}</h2>
+      <div class="update-wrap font-weight-bold">
+        {{ fillterUpdateTime }}<span class="ml-3">update</span>
+      </div>
+    </div>
     <section class="row">
-      <div class="col-4">
+      <div class="col-xl-4 col-md-6">
         <div class="row no-gutters district-selected">
           <div class="col-7 districtName">
            {{ siteSelectedData.SiteName }}
@@ -101,10 +108,10 @@
           </div>
         </div>
       </div>
-      <div class="col-8">
+      <div class="col-xl-8 col-md-6 mt-md-0 mt-5">
         <div class="row">
           <div
-            class="col-6 mb-5"
+            class="col-xl-6 mb-5"
             v-for='item in filterCountySelected'
             :key='item.SiteName'
             @click='selectSiteName(item)'
