@@ -129,15 +129,18 @@
       </div>
     </section>
   </div>
+  <Footer/>
 </div>
 </template>
 
 <script>
 import Loading from '../components/Loading.vue';
+import Footer from './layout/Footer.vue';
 
 export default {
   components: {
     Loading,
+    Footer,
   },
   computed: {
     filterCountySelected() {
