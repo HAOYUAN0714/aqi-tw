@@ -57,7 +57,7 @@
       </div>
     </div>
     <!-- mobole separate -->
-    <div class="separate-wrap my-xl-5 my-2 d-md-none d-block">
+    <div class="separate-wrap my-xl-5 my-2 d-md-none d-block text-center">
       <h2 class="font-weight-bold">{{ countySelected }}</h2>
       <div class="update-wrap font-weight-bold">
         {{ fillterUpdateTime }}<span class="ml-3">update</span>
